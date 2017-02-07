@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        button {
+            display: block;
+            margin: 0 auto;
+        }
+        
+        div {
+            width: 150px;
+            margin: 0 auto;
+            font-size: 14px;
+        }
+        
+        ul {
+            width: 77px;
+            margin: 0px;
+            padding: 0px;
+            border: 1px solid #9a99ff;
+            margin-left: 44px;
+            margin-top: 5px;
+            display: none;
+        }
+        
+        li {
+            width: 70px;
+            list-style-type: none;
+            padding-left: 7px;
+            padding-top: 5px;
+            color: #00c;
+        }
+        
+        #close {
+            border-top: 1px solid #9a99ff;
+        }
+        
+        a {
+            text-decoration-line: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <button type="button" onclick="typewriting()">输入法</button>
+        <ul>
+            <li><a href="#">手写</a></li>
+            <li><a href="#">拼音</a></li>
+            <li id="close"><a href="#" onclick="typewriting()">关闭</a></li>
+        </ul>
+    </div>
+    <script>
+        var ul = document.getElementsByTagName("ul")[0];
+        var li = document.getElementsByTagName("li");
+        var num = li.length;
+
+        function typewriting() {
+            if (ul.style.display === "block") {
+                ul.style.display = "none";
+            } else {
+                ul.style.display = "block";
+            }
+        }
+        for (var i = 0; i < num; i++) {
+            li[i].onmouseover = function() {
+                this.style.backgroundColor = "#d9e1f6";
+            }
+            li[i].onmouseout = function() {
+                this.style.backgroundColor = "white";
+            }
+        }
+    </script>
+</body>
+
+</html>
