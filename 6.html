@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body>div {
+            width: 200px;
+            font-size: 12px;
+            margin: 0 auto;
+        }
+        
+        body>div>div {
+            background: #ffefa4;
+            border: 1px solid #f90;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <label for="select" onmouseover="over()" onmouseout="out()"><input type="checkbox" id="select">两周内自动登录</label>
+        <div>为了您的信息安全，请不要在网吧或公用电脑上使用此功能！</div>
+    </div>
+    <script>
+        var div = document.getElementsByTagName("div")[1];
+
+        function over() {
+            div.style.display = "block";
+        }
+
+        function out() {
+            div.style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
