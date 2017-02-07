@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div {
+            width: 400px;
+            border: 1px solid black;
+            margin: 0 auto;
+            margin-top: 10px;
+        }
+        
+        span {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div><strong>中新网</strong>北京1月27日电（记者 张尼） 除夕来临，不少民众准备在爆竹声中迎接农历新年的到来。中新网记者注意到，考虑到环境污染等因素，今年春节中国不少地区仍将严格烟花爆竹的禁限放，违规燃放者可能会面临严厉处罚。</div>
+    <div><strong>参考消息网</strong>1月27日报道 日媒称，从1月27日开始，中国迎来为期1周的春节长假。虽然日本等海外旅游目的地对中国游客的购买力寄予了更高的期待，但在春节期间，中国的出境游客人数预计会与上一年持平，大约为<span>600万</span>人。</div>
+    <div><strong>每日经济新闻</strong>记者了解到，2017年1月18日，支付宝再次推出“集福”活动，跟去年相比，这次的活动集卡方式更多，用户之间不仅可以互换“福卡”，还可以通过“扫描”福字的方式获得“福卡”，也可以通过支付宝旗下的“蚂蚁森林”获得。</div>
+    <div>71岁的老汉驾驶老年代步车，载着两名同样年过七旬的老人不慎栽进道边小河里。一名驾车路过的90后小伙，将三位老人先后从车内拉出带上岸后悄然离开现场。救人的小伙叫赵远齐，家住徐州市铜山何桥镇赵台村，昨日他向记者讲述了救人经过。</div>
+    <script>
+        var div = document.getElementsByTagName("div");
+        var num = div.length;
+        for (var i = 0; i < num; i++) {
+            div[i].onclick = function() {
+                alert(this.innerHTML)
+            }
+        }
+    </script>
+</body>
+
+</html>
