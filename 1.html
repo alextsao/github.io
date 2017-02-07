@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #btn {
+            width: 280px;
+            margin: 0 auto;
+        }
+        
+        #square {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div id=btn>
+            <button id=towidth onclick="towidth()">变宽</button>
+            <button id=toheight onclick="toheight()">变高</button>
+            <button id=tocolor onclick="tocolor()">变色</button>
+            <button id=tohidden onclick="tohidden()">隐藏</button>
+            <button id=torest onclick="torest()">重置</button>
+        </div>
+        <div id=square></div>
+    </div>
+    <script>
+        var square = document.getElementById("square");
+
+        function towidth() {
+            square.style.width = "200px";
+        };
+
+        function toheight() {
+            square.style.height = "200px";
+        }
+
+        function tocolor() {
+            square.style.background = "red";
+        }
+
+        function tohidden() {
+            square.style.display = "none";
+        }
+
+        function torest() {
+            square.style.width = "100px";
+            square.style.height = "100px";
+            square.style.background = "black";
+            square.style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
