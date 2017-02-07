@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        button {
+            width: 150px;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        body>div {
+            width: 310px;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        
+        body>div>div {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <button type="button" onclick="tored()">点击将div变成红色</button>
+    <div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <script>
+        var num = document.getElementsByTagName("div").length;
+
+        function tored() {
+            for (var i = 1; i < num; i++) {
+                document.getElementsByTagName("div")[i].style.backgroundColor = "red";
+            }
+        }
+    </script>
+</body>
+
+</html>
