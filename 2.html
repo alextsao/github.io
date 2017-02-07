@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #A3C5A8;
+        }
+        
+        body>div {
+            width: 400px;
+            height: 80px;
+            margin: 0 auto;
+        }
+        
+        li {
+            width: 50px;
+            text-align: center;
+            list-style-type: none;
+            float: left;
+            background-color: green;
+        }
+        
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .btn {
+            width: 17px;
+            height: 17px;
+            display: inline-block;
+        }
+        
+        #btnred {
+            background-color: red;
+        }
+        
+        #btngreen {
+            background-color: green;
+        }
+        
+        #btnblack {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div id=btnred class="btn" onclick="tored()"></div>
+        <div id=btngreen class="btn" onclick="togreen()"></div>
+        <div id=btnblack class="btn" onclick="toblack()"></div>
+        <ul>
+            <li><a href="#">新闻</a></li>
+            <li><a href="#">娱乐</a></li>
+            <li><a href="#">体育</a></li>
+            <li><a href="#">电影</a></li>
+            <li><a href="#">音乐</a></li>
+            <li><a href="#">旅游</a></li>
+        </ul>
+    </div>
+    <script>
+        var body = document.getElementsByTagName("body")[0];
+        var li = document.getElementsByTagName("li");
+        var btnred = document.getElementById("btnred");
+        var btngreen = document.getElementById("btngreen");
+        var btnblack = document.getElementById("btnblack");
+        var num = li.length;
+
+        function tored() {
+            body.style.backgroundColor = "#fdd";
+            btnred.style.backgroundColor = "white";
+            btnred.style.width = "8px";
+            btnred.style.height = "8px";
+            btnred.style.border = "5px solid red";
+            btngreen.style.backgroundColor = "green";
+            btngreen.style.width = "17px";
+            btngreen.style.height = "17px";
+            btngreen.style.border = "none";
+            btnblack.style.backgroundColor = "black";
+            btnblack.style.width = "17px";
+            btnblack.style.height = "17px";
+            btnblack.style.border = "none";
+            for (var i = 0; i < num; i++) {
+                li[i].style.backgroundColor = "red";
+            }
+
+        }
+
+        function togreen() {
+            body.style.backgroundColor = "#A3C5A8";
+            btnred.style.backgroundColor = "red";
+            btnred.style.width = "17px";
+            btnred.style.height = "17px";
+            btnred.style.border = "none";
+            btngreen.style.backgroundColor = "white";
+            btngreen.style.width = "8px";
+            btngreen.style.height = "8px";
+            btngreen.style.border = "5px solid green";
+            btnblack.style.backgroundColor = "black";
+            btnblack.style.width = "17px";
+            btnblack.style.height = "17px";
+            btnblack.style.border = "none";
+            for (var i = 0; i < num; i++) {
+                li[i].style.backgroundColor = "green";
+            }
+
+        }
+
+        function toblack() {
+            body.style.backgroundColor = "#ccc";
+            btnred.style.backgroundColor = "red";
+            btnred.style.width = "17px";
+            btnred.style.height = "17px";
+            btnred.style.border = "none";
+            btngreen.style.backgroundColor = "green";
+            btngreen.style.width = "8px";
+            btngreen.style.height = "8px";
+            btngreen.style.border = "5px solid green";
+            btnblack.style.backgroundColor = "white";
+            btnblack.style.width = "8px";
+            btnblack.style.height = "8px";
+            btnblack.style.border = "5px solid black";
+            for (var i = 0; i < num; i++) {
+                li[i].style.backgroundColor = "black";
+            }
+
+        }
+    </script>
+</body>
+
+</html>
